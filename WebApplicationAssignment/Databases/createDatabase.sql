@@ -1,5 +1,6 @@
  /****** Creating Subject Area table and adding values to the database too ******/
-
+USE HigherEducationChesterfieldCollege
+GO
 
 -- delete the table if it exists and drop any sequences that already exists--
 --DROP TABLE IF EXISTS Admin.WebsiteAdministrator, Course.SubjectArea, Course.Course, Course.FavouriteCourse, Messaging.UserLogin, Course.Comment, Messaging.Friend, Messaging.Message, Messaging.GroupChat, Messaging.ChatAdministrator;
@@ -27,16 +28,16 @@ CREATE TABLE SubjectArea (
 	Name nvarchar(25) NOT NULL,
 	ImageUrl nvarchar(300) NULL,
 	AdditionalInformation nvarchar(1000),
-	WebsiteAdminId int,
-	RowCreateTime		datetime2(0) NULL,
-	RowLastUpdateTime	datetime2(0) NULL
 
 );
 GO
+/* Primary key for Subject Area */
 ALTER TABLE SubjectArea
 	ADD CONSTRAINT PKSubjectArea PRIMARY KEY CLUSTERED (Id);
 GO
 SET IDENTITY_INSERT SubjectArea ON
+
+/* Inserting values for Subject area table */
 INSERT SubjectArea (ID, Name, ImageUrl, AdditionalInformation) VALUES (0, 'Engineering', NULL, NULL)
 GO
 INSERT SubjectArea (ID, Name, ImageUrl, AdditionalInformation) VALUES (1, 'Construction' , NULL, NULL)
@@ -54,7 +55,7 @@ GO
 INSERT SubjectArea (ID, Name, ImageUrl, AdditionalInformation) VALUES (7, 'Childhood Studies', NULL, NULL)
 GO
 
-SET IDENTITY_INSERT Course.SubjectArea OFF
+SET IDENTITY_INSERT SubjectArea OFF
 /****** adding primary key to the table *******/
 SET ANSI_NULLS ON
 GO
@@ -70,16 +71,19 @@ CREATE TABLE Course (
 	PartFullTime nvarchar(10) NOT NULL,
 	LevelOfCourse int NOT NULL,
 	SubjectAreaId int NOT NULL,
-	RowCreateTime		datetime2(0) NULL,
-	RowLastUpdateTime	datetime2(0) NULL
+
 
 );
 GO
+
+/* Adding a primary key to the Course table */
 ALTER TABLE Course
 	ADD CONSTRAINT PKCourse PRIMARY KEY CLUSTERED (Id);
 GO
 GO
-SET IDENTITY_INSERT Course.Course ON
+SET IDENTITY_INSERT Course ON
+
+/* Adding values to the course table */
 INSERT Course (Id, Name, ImageUrl, AdditionalInformation, PartFullTime, LevelOfCourse, SubjectAreaId) VALUES (0, 'HN in Engineering', NULL, NULL, 'Full-Time', 5, 0)
 GO
 INSERT Course (Id, Name, ImageUrl, AdditionalInformation, PartFullTime, LevelOfCourse, SubjectAreaId) VALUES (1, 'HN in Engineering', NULL, NULL, 'Part-Time', 5, 0)
@@ -139,11 +143,12 @@ CREATE TABLE Comment(
 	EmailAddress nvarchar(345) NOT NULL,
 	CommentInformation nvarchar(1000) NOT NULL,
 	DateAndTimeOfCommentSent datetime NOT NULL,
-	CourseID int,
-	RowCreateTime		datetime2(0) NOT NULL,
-	RowLastUpdateTime	datetime2(0) NOT NULL
+	CourseId int
+
 
 );
+
+/* Creating a primary key for Comment table */
 ALTER TABLE Comment
 	ADD CONSTRAINT PKComment PRIMARY KEY CLUSTERED (Id);
 GO
@@ -157,22 +162,24 @@ CREATE TABLE UserLogin (
 	DateOfBirth varchar(15) NOT NULL,
 	Gender varchar(15) NOT NULL,
 	EmailAddress varchar(50) NOT NULL,
-	PhoneNumber varchar(15) NOT NULL,
-	CurrentStudent bit NOT NULL,
-	Password varchar (15) NOT NULL,
-	LoggedOn char NOT NULL,
-	ProfilePicture nvarchar (30),
-	FriendID int,
-	RowCreateTime		datetime2(0) NOT NULL,
-	RowLastUpdateTime	datetime2(0) NOT NULL
+	PhoneNumber varchar(15) NULL,
+	CurrentStudent varchar(3) NOT NULL,
+	Password varchar(15) NULL,
+	ProfilePicture nvarchar(4000) NULL,
+	CourseId int NULL,
+	Description nvarchar(1000) NULL,
+	FriendId int NULL,
+
 
 );
 GO
+
+/* Creating a primary key for UserLogin table */
 ALTER TABLE UserLogin
 	ADD CONSTRAINT PKUserLogin PRIMARY KEY CLUSTERED (Id);
 GO
 
-/****** Creating AdminLogin table ******/
+/****** Creating WebsiteAdministrator table ******/
 CREATE TABLE WebsiteAdministrator (
 	Id int IDENTITY(1, 1) NOT NULL,
 	FirstName varchar(30) NOT NULL,
@@ -182,90 +189,107 @@ CREATE TABLE WebsiteAdministrator (
 	EmailAddress varchar(50) NOT NULL,
 	Password varchar (15) NOT NULL,
 	LoggedOn bit NOT NULL,
-	RowCreateTime		datetime2(0) NOT NULL,
-	RowLastUpdateTime	datetime2(0) NOT NULL
 );
+
+/* Creating a primary key for WebsiteAdministrator table */
 ALTER TABLE WebsiteAdministrator
 	ADD CONSTRAINT PKAdministrator PRIMARY KEY CLUSTERED (Id);
 GO
 
-/****** Creating FavouriteCourse table  ******/
-CREATE TABLE FavouriteCourse (
-	Id int IDENTITY(1, 1) NOT NULL,
-	UserLoginId int NULL,
-	CourseId int NULL,
-	RowCreateTime		datetime2(0) NOT NULL,
-	RowLastUpdateTime	datetime2(0) NOT NULL
 
-);
-ALTER TABLE FavouriteCourse
-	ADD CONSTRAINT PKFavouriteCourse PRIMARY KEY CLUSTERED (Id);
-GO
-
+/****** Creating Friend table ******/
 CREATE TABLE Friend (
 	Id int IDENTITY(1, 1) NOT NULL,
-	FirstName nvarchar(30) NOT NULL,
-	Surname nvarchar(30) NOT NULL,
-	DateOfBirth DateTime2(0) NOT NULL,
+	FirstName varchar(30) NOT NULL,
+	Surname varchar(30) NOT NULL,
+	DateOfBirth varchar(15) NOT NULL,
+	CurrentStudent varchar(3) NOT NULL,
 	Gender varchar(15) NOT NULL,
-	EmailAddress nvarchar(50) NOT NULL,
-	PhoneNumber nvarchar(11) NOT NULL,
-	ProfilePicture nvarchar(300) NOT NULL,
+	EmailAddress varchar(50) NOT NULL,
+	PhoneNumber varchar(15) NOT NULL,
+	ProfilePicture nvarchar(4000) NOT NULL,
 	UserId int NOT NULL,
-	RowCreateTime		datetime2(0) NOT NULL,
-	RowLastUpdateTime	datetime2(0) NOT NULL
-
+	CourseId int NULL,
+	FriendRequest int NULL,
 );
+
+/* Creating a primary key for Friend table */
 ALTER TABLE Friend
 	ADD CONSTRAINT PKFriend PRIMARY KEY CLUSTERED (Id);
 GO
 
+/****** Creating Message table ******/
 CREATE TABLE Message (
 	Id int IDENTITY(1, 1) NOT NULL,
-	MessageText nvarchar(25) NOT NULL,
-	DateOfMessageSent dateTime2 NOT NULL,
-	FriendId int NOT NULL,
+    FriendId int NULL,
 	UserId int NOT NULL,
-	PictureInserted nvarchar(300) NOT NULL,
-	VideoInserted nvarchar(100) NOT NULL,
-	RowCreateTime		datetime2(0) NOT NULL,
-	RowLastUpdateTime	datetime2(0) NOT NULL
+	MessageText nvarchar(500) NULL,
+	PictureInserted nvarchar(4000) NULL,
+	VideoInserted nvarchar(4000) NULL,
+	DateOfMessageSent date NOT NULL,
+	TimeOfMessageSent time(7) NOT NULL,
+
+
 );
+
+/* Creating a primary key for Message table */
 ALTER TABLE Message
 	ADD CONSTRAINT PKMessage PRIMARY KEY CLUSTERED (Id);
 GO
 
-
+/****** Creating Groupchat table ******/
 CREATE TABLE GroupChat (
 	Id int IDENTITY(1, 1) NOT NULL,
 	Name nvarchar(40) NOT NULL,
-	ProfilePicture nvarchar(300) NOT NULL,
-	MessageId int NOT NULL,
-	AdministratorId int NOT NULL,
-	RowCreateTime		datetime2(0) NOT NULL,
-	RowLastUpdateTime	datetime2(0) NOT NULL
+	ProfilePicture nvarchar(4000) NOT NULL,
+
+	AdministratorId int NOT NULL
 );
+
+/* Creating a primary key for GroupChat table */
 ALTER TABLE GroupChat
 	ADD CONSTRAINT PKGroupChat PRIMARY KEY CLUSTERED (Id);
 GO
 
-CREATE TABLE ChatAdministrator (
+/****** Creating GroupMember table ******/
+CREATE TABLE GroupMember (
 	Id int IDENTITY(1, 1) NOT NULL,
-	GroupChatId int NOT NULL,
-	UserId int NOT NULL,
-	RowCreateTime		datetime2(0) NOT NULL,
-	RowLastUpdateTime	datetime2(0) NOT NULL
-);
-ALTER TABLE ChatAdministrator
-	ADD CONSTRAINT PKChatAdministrator PRIMARY KEY CLUSTERED (Id);
+	FriendId int NOT NULL,
+	GroupChatId int NOT NULL
+
+)
+/* Creating a primary key for GroupMember table */
+ALTER TABLE GroupMember
+	ADD CONSTRAINT PKGroupMember PRIMARY KEY CLUSTERED (Id);
 GO
+
+/****** Creating GroupMessage table ******/
+CREATE TABLE GroupMessage (
+	Id int IDENTITY(1, 1) NOT NULL,
+	GroupMemberId int NOT NULL,
+	MessageText nvarchar(500) NOT NULL,
+	DateOfMessageSent date NOT NULL,
+	TimeOfMessageSent time(7) NOT NULL,
+
+)
+
+/* Creating a primary key for GroupMessage table */
+ALTER TABLE GroupMessage
+	ADD CONSTRAINT PKGroupMessage PRIMARY KEY CLUSTERED (Id);
+GO
+
+
+
 
 
 
 
 /***** making relationships between different tables between the foreign keys and the primary keys ******/
+
 ALTER TABLE Comment ADD  CONSTRAINT [DF_Image_DateAndTimeOfCommentSent]  DEFAULT (getdate()) FOR [DateAndTimeOfCommentSent]
 GO
+
+ALTER TABLE Message ADD CONSTRAINT [DF_Message_DateOfMessageSent] DEFAULT (getdate()) FOR [DateOfMessageSent];
 
 ALTER TABLE Course  WITH CHECK ADD  CONSTRAINT [FK_Course_SubjectArea] FOREIGN KEY(SubjectAreaId)
 REFERENCES SubjectArea (Id)
@@ -275,17 +299,6 @@ ALTER TABLE Comment  ADD CONSTRAINT [FK_Comment_Course] FOREIGN KEY(CourseId)
 REFERENCES Course(Id)
 GO
 
-ALTER TABLE FavouriteCourse ADD CONSTRAINT [FK_FavouriteCourse_UserLogin] FOREIGN KEY(UserLoginId)
-REFERENCES UserLogin (Id)
-GO
-
-ALTER TABLE FavouriteCourse ADD CONSTRAINT [FK_FavouriteCourse_Course] FOREIGN KEY(CourseId)
-REFERENCES  Course (Id)
-GO
-
-ALTER TABLE SubjectArea  ADD CONSTRAINT [FK_SubjectArea_WebsiteAdminstrator] FOREIGN KEY(WebsiteAdminId)
-REFERENCES WebsiteAdministrator(Id)
-GO
 
 ALTER TABLE UserLogin ADD CONSTRAINT [FK_UserLogin_Friend] FOREIGN KEY(FriendId)
 REFERENCES Friend(Id)
@@ -295,11 +308,25 @@ ALTER TABLE Message ADD CONSTRAINT [FK_Message_Friend] FOREIGN KEY(FriendId)
 REFERENCES Friend(Id)
 GO
 
-ALTER TABLE GroupChat ADD CONSTRAINT [FK_Message_GroupChat] FOREIGN KEY(MessageId)
-REFERENCES Message(Id)
-GO
-
-ALTER TABLE GroupChat ADD CONSTRAINT [FK_GroupChat_UserLogin] FOREIGN KEY(AdministratorId)
+ALTER TABLE Message ADD CONSTRAINT [FK_Message_UserLogin] FOREIGN KEY(UserId)
 REFERENCES UserLogin(Id)
 GO
 
+
+
+ALTER TABLE GroupMember  WITH CHECK ADD  CONSTRAINT [FK_GroupMember_GroupChat] FOREIGN KEY(GroupChatId)
+REFERENCES GroupChat (Id)
+GO
+
+ALTER TABLE GroupMember  WITH CHECK ADD  CONSTRAINT [FK_GroupMember_UserLogin] FOREIGN KEY(FriendId)
+REFERENCES UserLogin (Id)
+GO
+
+
+ALTER TABLE GroupMessage WITH CHECK ADD CONSTRAINT [FK_GroupMessage_GroupMember] FOREIGN KEY(GroupMemberId) 
+REFERENCES GroupMember (Id)
+GO
+
+ALTER TABLE GroupChat ADD CONSTRAINT [FK_GroupChat_UserLogin] FOREIGN KEY(AdministratorId)
+REFERENCES UserLogin (Id)
+GO
