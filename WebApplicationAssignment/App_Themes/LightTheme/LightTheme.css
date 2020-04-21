@@ -615,14 +615,14 @@ img, .column1of2Admin, .column2of2Admin {
 .column1of2subjectArea {
     float: left;
     width: 300px;
-    height: 200px;
+    height: 400px;
     align-content: center;
 }
 
 .column2of2subjectArea {
     float: right;
     width: 300px;
-    height: 220px;
+    height: 400px;
     margin-left: 60px;
     vertical-align: middle;
     align-content: center;
