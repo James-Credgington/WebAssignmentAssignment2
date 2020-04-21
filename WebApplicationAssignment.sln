@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebApplicationAssignment", "WebApplicationAssignment\", "{BF9B5D8D-F2DB-4968-9B69-E0D7AC9D1FC8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61437"
+		Debug.AspNetCompiler.PhysicalPath = "WebApplicationAssignment\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61437\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61437"
+		Release.AspNetCompiler.PhysicalPath = "WebApplicationAssignment\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61437\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61437"
+		SlnRelativePath = "WebApplicationAssignment\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF9B5D8D-F2DB-4968-9B69-E0D7AC9D1FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9B5D8D-F2DB-4968-9B69-E0D7AC9D1FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF217EA2-023C-4045-8E95-6699752DFD86}
+	EndGlobalSection
+EndGlobal

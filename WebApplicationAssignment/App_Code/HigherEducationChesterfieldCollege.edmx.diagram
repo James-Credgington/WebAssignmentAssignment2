@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="06450f6ae17241e7aa9af8df862372bc" Name="Diagram1">
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.ChatAdministrator" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.Comment" Width="1.5" PointX="12.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.Course" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.Friend" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.GroupChat" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.GroupMember" Width="1.5" PointX="7.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.GroupMessage" Width="1.5" PointX="9.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.Message" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.SubjectArea" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.UserLogin" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HigherEducationChesterfieldCollegeModel.WebsiteAdministrator" Width="1.5" PointX="5.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="HigherEducationChesterfieldCollegeModel.FK_Comment_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="HigherEducationChesterfieldCollegeModel.FK_Course_SubjectArea" ManuallyRouted="false" />
+        <AssociationConnector Association="HigherEducationChesterfieldCollegeModel.FK_Message_Friend" ManuallyRouted="false" />
+        <AssociationConnector Association="HigherEducationChesterfieldCollegeModel.FK_UserLogin_Friend" ManuallyRouted="false" />
+        <AssociationConnector Association="HigherEducationChesterfieldCollegeModel.FK_GroupChat_UserLogin" ManuallyRouted="false" />
+        <AssociationConnector Association="HigherEducationChesterfieldCollegeModel.FK_GroupMember_GroupChat" ManuallyRouted="false" />
+        <AssociationConnector Association="HigherEducationChesterfieldCollegeModel.FK_GroupMember_UserLogin" ManuallyRouted="false" />
+        <AssociationConnector Association="HigherEducationChesterfieldCollegeModel.FK_GroupMessage_GroupMember" ManuallyRouted="false" />
+        <AssociationConnector Association="HigherEducationChesterfieldCollegeModel.FK_Message_UserLogin" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

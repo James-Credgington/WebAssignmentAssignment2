@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/" title="Home"  description="">
+    <siteMapNode url="~/SocialMedia/Home.aspx" title="Home"  description="Homepage of your account" />
+    <siteMapNode url="~/SocialMedia/EditProfile.aspx" title="Profile"  description="Edit your Profile" />
+    <siteMapNode url="~/SocialMedia/AddFriend.aspx" title="Friends" description="Add your Friend" />
+    <siteMapNode url="~/SocialMedia/Groupchat.aspx" title="Group Chats" description ="View your Group Chats" />
+    <siteMapNode url="~/SocialMedia/PublicChat.aspx" title="Public Chat" description="Read and access public messages" />
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,13 @@
+﻿Hello ##Gender## ##Name##,
+
+Thank you for booking an open day on ##dateOfOpenDay## at Chesterfield College.
+
+We will contact you with the details provided below:
+Email Address: ##EmailAddress##
+Phone Number: ##PhoneNumber##
+Looking forward to meeting you,
+
+Yours Faithfully,
+
+James Credgington
+Web Developer of the Higher Education Chesterfield College Website

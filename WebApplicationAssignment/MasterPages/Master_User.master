@@ -1,0 +1,258 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master_User.master.cs" Inherits="MasterPages_Master_User" %>
+<!-- key information about the page for the code file and inherits the master class to. -->
+<!DOCTYPE html>   <!-- start of html tag -->
+
+<html>
+<head runat="server">
+    <!-- start of header -->
+    
+    <title></title>
+    <meta name="viewport" content="width=device-width" />
+    <script src="/Scripts/modernizr-2.7.1.js"></script> <!-- imported modernizr library, linked to all content pages that are linked to this master page -->
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script> <!-- import jquery library, linked to all content pages that are linked to this master page -->
+
+    <script>/*start of java script */
+
+        /* function for changing font-styles within the website */
+        $(document).ready(function () {
+            $("#fontList").change(function () { /*linking dropdown list to change font families*/
+                var font = $('#fontList').val();
+                $("*").css("font-family", font); /*changes the font families*/
+            });
+        });
+
+        /*Additional settings that I could get done in time underneath commented */
+         /*$(document).ready(function () {
+            $("#backgroundColour").change(function () {
+                var backColour = $('#backgroundColour').val();
+                $("body").css("background-color", backColour);
+            });
+        });
+         $(document).ready(function () {
+            $("#fontSize").change(function () {
+                var fontSize = $('#fontSize').val();
+                $("body").css("font-size", fontSize);
+            });
+        });*/
+        /* $(document).ready(function () {
+            $("#fontColour").change(function () {
+                var fontColour = $('#fontColour').val();
+                $("p").css("color", fontColour);
+                $(".footerPage p").css("color", "white");
+                $("h4.footerHeading").css("color", "white");
+                $("h2").css("color", fontColour);
+                $("h3").css("color", fontColour);
+                $("h4").css("color", fontColour);
+                $("li").css("color", fontColour);
+            });
+        });*/
+         /*$(document).ready(function () {
+            $("#headingFontColour").change(function () {
+                var headingFontColour = $('#headingFontColour').val();
+                $("h1").css("color", headingFontColour);
+            });
+        });*/
+    </script><!-- end of javascript code -->
+
+  
+    </head> <!-- end of header -->
+    <body><!-- start of body -->
+    <form id="form1" runat="server"><!-- start of form -->    
+        <!-- import logo to the page -->
+        <asp:Image ID="Image1" runat="server" Height="87px" ImageUrl="~/Images/logo.JPG" Width="228px" />
+            
+        <!-- start of the navigation bar -->
+          <nav> 
+              <!-- start of menu with styling set below -->
+            <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" EnableTheming="True" ItemWrap="True" DynamicHorizontalOffset="1">
+                <StaticSelectedStyle BackColor="#086FFB" />
+                <DynamicSelectedStyle BackColor="#086FFB" />
+              
+                <StaticHoverStyle BackColor="#00CCFF" CssClass="navHover" />
+                <DynamicHoverStyle BackColor="#00CCFF" CssClass="navHover" />
+       
+                <StaticMenuItemStyle CssClass="staticNavItem" />
+ 
+       
+            </asp:Menu><!-- end of menu with site map located below linking the web.sitemap to nav bar -->
+        </nav><!-- end of navigation bar -->
+        <!--site map source below for the navigation bar -->
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" SiteMapProvider="userSiteMap" ShowStartingNode="false" />
+            
+
+     
+        
+
+        
+                       
+        <aside id="Sidebar"><!-- start of sidebar, with the id linking to the css file -->
+                <h3 class="sidebarHeadings">Additional Settings</h3><!-- heading for the sidebar -->
+                <div class="column1of2themes"><!-- start of div with the class column1of2Themes -->
+                <p class="sidebarText">Themes</p><!-- div with the class sidebarText -->
+                </div><!-- end of div tag -->
+                <div class="column2of2themes"><!-- start of div with themes -->
+                    <!-- dropdown is linked down with the method 'ThemeList_SelectedIndexChanged' -->
+                    <asp:DropDownList ID="ThemeList" CssClass="dropDown" runat="server" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged" AutoPostBack="True">
+                        <asp:ListItem>LightTheme</asp:ListItem>
+                        <asp:ListItem>DarkTheme</asp:ListItem>
+                    </asp:DropDownList><br /><!-- end of div with themes -->
+                </div><!-- end of div tag -->
+
+
+                <div class="column1of2sidebar"><!-- start of div with the class column1of2sidebar -->
+                <p class="sidebarText">Headings Font Colour</p> <!-- paragraph with the class 'sidebarText -->
+                </div><!-- end of div tag -->
+                <div class="column2of2sidebar"> <!-- start of div with the class column2of2 sidebar -->
+                <asp:Button ID="btn_HeadingTextColour" runat="server" CssClass="masterButtonColourChange" Width="35px"  />
+                </div><!-- end of div tag -->
+                <div class="column1of2sidebar"> <!-- start of div class with the class column1of2 sidebar -->
+                <p class="sidebarText">Subheadings Font Colour</p><!-- paragraph with class sidebarText -->
+                </div><!-- end of div tag -->
+                <div class="column2of2sidebar"><!--start of div with the class column2of2 sidebar -->
+
+                <!-- subheading text colour button with css class 'masterButtonColourChange' -->
+                <asp:Button ID="btn_SubheadingTextColour" runat="server" CssClass="masterButtonColourChange" Width="35px" />
+                </div><!-- end of div tag -->
+                <div class="column1of2sidebar"><!-- start of div with the class column1of2 sidebar -->
+                <p class="sidebarText">Other Text Font Colour</p><!-- paragraph with class sidebarText -->
+                </div><!-- end of div tag -->
+                <div class="column2of2sidebar"><!-- start of div with the class column2of2 sidebar -->
+                
+                <!-- other text colour button with css class with masterButtonColour change -->    
+                <asp:Button ID="btn_OtherTextColour" runat="server" CssClass="masterButtonColourChange" Width="35px" />
+                </div><br /><!-- end of div tag -->
+
+                <div class="column1of2sidebar"><!-- start of div with the class column1of2 sidebar -->
+                <p class="sidebarText">Fill Sidebar</p><!-- paragraph with class sidebarText -->
+                </div><!-- end of div tag -->
+                <div class="column2of2sidebar"><!-- start of div with the class column2of2 sidebar -->
+                <!--  button which changes background colour of sidebar with css class masterButtonColour-->
+                    <asp:Button ID="btn_FillSideBar" runat="server" CssClass="masterButtonColourChange" Width="35px" />
+                </div><!-- end of div tag -->
+
+                <div class="column1of2sidebar"><!-- start of div with the class column1of2 sidebar -->
+                <p class="sidebarText">Fill Navigation Bar </p><!-- paragraph with class sidebarText -->
+                </div><!-- end of div tag -->
+                <div class="column2of2sidebar"><!-- start of div with the class column2of2 sidebar --> 
+                    
+                <!--  button which changes background colour of the navigation bar with css class masterButtonColour-->
+                    
+                    <asp:Button ID="btn_FillNavBar" runat="server" CssClass="masterButtonColourChange" Width="35px" />
+                </div><!-- end of div tag -->
+                 <div class="column1of2sidebar"><!-- start of div with the class column1of2 sidebar -->
+                 <p class="sidebarText">Fill Site Map</p><!-- paragraph with class sidebarText -->
+                 </div><!-- end of div tag -->
+                 <div class="column2of2sidebar"><!-- start of div with the class column2of2 sidebar -->
+                <!--  button which changes background colour of sitemap with css class masterButtonColour-->
+                   
+                     <asp:Button ID="btn_FillSiteMap" runat="server" CssClass="masterButtonColourChange" Width="35px" />
+                </div><!-- end of div tag -->
+                 <div class="column1of2sidebar"><!-- start of div with the class column1of2 sidebar -->
+                <p class="sidebarText">Fill Background Colour</p><!-- paragraph with class sidebarText -->
+                </div><!-- end of div tag -->
+                <div class="column2of2sidebar"><!-- start of div with the class column2of2 sidebar -->
+                <select id="backgroundColour"><!-- start of the select box with the id of backgroundColour with values set below-->
+                    <option value="white">white</option>
+                    <option value="#90EE90">Light Green</option>
+                    <option value="pink">Pink</option>
+                    <option value="#FFFFE0">Light Yellow</option>
+                    <option value="#ADD8E6">Light Blue</option>
+                       <option value="#E6E6FA">Light Purple</option>
+                    
+                </select><!-- end of select box-->
+
+                </div><!-- end of div tag -->
+                <div class="column1of2sidebar"><!-- start of div with the class column1of2 sidebar -->
+                    <p>Font Colour</p><!--paragraph label as a label for the select box next to it -->
+                </div><!-- end of div tag -->
+                <div class="column2of2sidebar"><!-- start of div with the class column2of2 sidebar -->
+                    <select id="fontColour"><!-- start of the select box with the id of fontColour -->
+                        <option value="#000000">Black</option>
+                        <option value="#563c5c">Dark Purple</option>
+                        <option value="#0017AB">Dark Blue</option>
+                        <option value="#9B870C">Dark Yellow</option>
+                        <option value="#8B0000">Dark Red</option>
+                        <option value="#006400">Dark Green</option>
+                    </select><!-- end of select box -->
+                </div><!-- end of div tag -->
+                <div class="column1of2themes"><!-- start of div with the class column1of2theme -->
+                <p class="sidebarText">Font Style</p><!-- paragraph with class sidebarText -->
+                </div><!-- end of div tag -->
+                <div class="column2of2themes"><!-- start of div with the class column2of2themes -->
+                    
+                    <select ID="fontList"><!-- start of the select box with the id of fontList -->
+                        <option value="Arial">Arial</option>
+                        <option value="Century-Gothic">Century Gothic</option>
+                        <option value="Calibri">Calibri</option>
+                        <option value="Treburchet MS">Treburchet MS</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                    </select><!-- end of select box -->
+                </div><!-- end of div tag -->
+                <div class="column1of2themes"><!-- start of div with the column1of2themes -->
+                    <p class="sidebarText">Text Size</p><!-- paragraph with class sidebarText -->
+                </div><!-- end of div tag -->
+                <div class="column2of2themes"><!--start of div with the class column2of2themes -->
+                    <!-- start of select box with id fontsize -->
+                    <select ID="fontSize" runat="server">
+                        <option value="20pt">Extra Large</option>
+                        <option value="16pt">Large</option>
+                        <option value="12pt">Normal</option>
+                    </select><!-- end of select box -->
+                </div><!-- end of div tag -->
+                <div class="column1of2sidebar"><!-- start of div with the class column1of2sidebar -->
+                    <p class="sidebarText">Heading colour</p><!-- paragraph with class sidebarText -->
+                </div><!-- end of div tag -->
+                <div class="column2of2sidebar"><!-- start of div with the class column2of2sidebar -->
+                    <select id="headingFontColour">
+                        <option value="#000000">Black</option>
+                        <option value="#563c5c">Dark Purple</option>
+                        <option value="#0017AB">Dark Blue</option>
+                        <option value="#9B870C">Dark Yellow</option>
+                        <option value="#8B0000">Dark Red</option>
+                        <option value="#006400">Dark Green</option>
+                    </select><!-- end of select box -->
+                </div><!-- end of div tag -->
+                
+        </aside><!-- end of sidebar -->
+        <br />
+                 <section id="MainSection"><!-- start of main section -->
+            <asp:ContentPlaceHolder ID="cpMainSection" runat="server"><!-- start of where the content pages start -->
+
+
+            </asp:ContentPlaceHolder> <!-- end of where the content page ends -->
+
+        </section> <!-- end of main section -->
+        <footer class="footerPage"><!-- start of footer with class footerPage-->
+            <p class="footer">JTCWebDesign.Ltd</p><!-- paragraph with class sidebarText -->
+
+            <div class="column1of4Footer"><!-- first column of the footer -->
+                <h4 class="footerAdmin">General Information</h4><!-- heading for General information -->
+                <a href="/Home.aspx">Home</a><br /><!-- link to the homepage-->
+                <a href="/About/AboutUs.aspx">About Us</a><br /><!-- link to the about us page-->
+                <a href="/About/FindACourse.aspx">Find a Course</a><br /><!-- link to the find a course page-->
+
+            </div><!-- end of div tag -->
+            <div class="column2of4Footer"><!-- second column of the footer -->
+                <h4 class="footerAdmin">Online Forms</h4><!-- heading for online forms -->
+                <a href="/About/ContactUs.aspx">Contact Us</a><br /><!-- link to the contact us page-->
+                <a href="/About/BookOpenDay.aspx">Book an Open Day</a><!-- link to the book an open day page-->
+            </div><!-- end of div tag -->
+            
+            <div class="column3of4Footer"><!-- third column of the footer -->
+                <h4 class="footerAdmin">User Login</h4><!-- heading for user login -->
+                <a href="/About/LogInUser.aspx">Log In</a><br /><!-- link to the user login page-->
+                <a href="/About/SignUpUser.aspx">Sign Up</a><br /><!-- link to the user sign up page-->
+                
+            </div><!-- end of div tag -->
+            <div class="column4of4Footer"><!-- fourth column of the footer -->
+                <h4 class="footerAdmin">Administrator Login</h4><!-- heading for administrator login-->
+                <a href="/Admin/LogInAdmin.aspx">Log In</a><br /><!-- link to the administrator login page-->
+                <a href="/Admin/SignUpAdmin">Sign Up</a><!-- link to the administrator signup page -->
+           </div><!-- end of div tag -->
+        </footer><!-- end of footer -->
+        
+    </form><!-- end of form -->
+    
+</body><!-- end of body tag -->
+
+</html>

@@ -1,0 +1,18 @@
+﻿Hello ##Gender## ##Name##,
+
+You have successfully created an account on the Higher Education Chesterfield College Website.
+
+Your login details are:
+	Username: ##EmailAddress##
+	Password: ##Password##
+
+By creating an account on this website, you can:
+	Save courses as favourites
+	Don't have too add additional details for booking an open day or making an enquiry form. 
+
+
+
+Kind Regards,
+
+James Credgington
+Web Developer of the Higher Education Chesterfield College Website

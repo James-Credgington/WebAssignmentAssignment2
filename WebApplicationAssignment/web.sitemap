@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- user sitemap with one-tier where it has the main pages then if necessary, e.g edit courses are the main one, then sub pages below-->
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/" title="Home" description="Home" >
+    <siteMapNode url="~/Default.aspx" title="Home" description="Go To Homepage" />
+    <siteMapNode url="~/About/AboutUs.aspx" title="About Us" description="About Us" />
+    <siteMapNode url="~/About/FindACourse.aspx" title="Find A Course" description="Find A Course"/>
+     
+    <siteMapNode url="~/About/ContactUs.aspx" title="Contact Us" description="Contact Us" />
+  </siteMapNode>
+
+</siteMap>

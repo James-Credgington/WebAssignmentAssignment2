@@ -1,0 +1,12 @@
+﻿Hello ##Gender## ##Name##,
+
+You have created an administrator account, which means you can modify the Higher Education Chesterfield College Website's Content. You can do this by adding, editing and deleting different courses and different subject area pages. 
+
+Your login details are:
+Username: Your email address
+Password: ##Password##
+
+Yours Faithfully,
+
+James Credgington
+Web Developer of the Higher Education Chesterfield College Website

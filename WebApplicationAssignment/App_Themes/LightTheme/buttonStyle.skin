@@ -1,0 +1,1 @@
+﻿<asp:Button CssClass="masterButton" runat="server" SkinID="Button" runat="server" />

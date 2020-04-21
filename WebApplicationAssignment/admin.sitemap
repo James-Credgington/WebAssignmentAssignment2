@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- administrator sitemap where it has the main pages then if necessary, e.g edit courses are the main one, then sub pages below-->
+
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/" title="Home"  description="">
+    <siteMapNode url="~/Admin/home.aspx" title="Home" description="Administrative Homepage"/>
+    <siteMapNode url="~/Admin/EditCourses.aspx" title="Edit Courses" description="Edit courses pages">
+      <siteMapNode url="~/Admin/EditCourseInfo.aspx" title="Edit Course Information"  description="Edit the information within the courses pages" />
+      <siteMapNode url="~/Admin/AddCourse.aspx" title="Add Courses"  description="Add additional courses to the website" />
+      <siteMapNode url="~/Admin/DeleteCourse.aspx" title="Delete Courses"  description="Delete courses from the website" />
+    </siteMapNode>
+    <siteMapNode url="~/Admin/EditSubjectArea.aspx" title="Edit Subject Area" description="Edit Subject Area Pages">
+      <siteMapNode url="~/Admin/EditSubjectAreaInfo.aspx" title="Edit Subject Area Information" description="Edit the information within the subject area pages" />
+      <siteMapNode url="~/Admin/AddSubjectArea.aspx" title="Add Subject Areas" description="Add additional subject areas to the website"/>
+      <siteMapNode url="~/Admin/DeleteSubjectArea.aspx" title="Delete Subject Areas" description="Delete subject area from the website"/>
+    </siteMapNode>
+    <siteMapNode url="~/Admin/ModifyComments.aspx" title="Edit Comments" description="Look at comments and see if any will be deleted" />
+  </siteMapNode>
+</siteMap>

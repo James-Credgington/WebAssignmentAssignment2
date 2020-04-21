@@ -1,0 +1,935 @@
+﻿/* styling for the whole website*/
+
+* {
+    font-family: Arial;
+}
+
+/* styling for the body of the website*/ 
+body {
+    background-color: #0017af;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* styling for all hyperlinks unless specified throughout the whole website */
+a {
+    text-decoration: none;
+}
+
+/* styling for all major headings of the website */
+h1 {
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+}
+/* styling for all subheadings of the website*/
+h2 {
+    text-align: center;
+}
+
+
+
+/* multiple elements including headings, text and lists*/
+h2, h3, h4, p, ul {
+    color: #5ab8ff; /*light blue blue*/
+}
+
+/* Master Page CSS properties */
+
+/* styling for the sidebar*/
+#Sidebar {
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    float: left;
+    display: block
+}
+
+/* styling for fontColour id*/
+#fontColour {
+    width: 100%;
+}
+
+/* styling for headingFontColour id*/
+#headingFontColour {
+    width: 100%;
+}
+
+/* styling for fontSize id*/
+#fontSize {
+    width: 100%;
+}
+
+/* styling for backgroundColour id*/
+#backgroundColour {
+    width: 100%;
+}
+
+/* styling for fontList id*/
+#fontList {
+    width: 100%;
+}
+
+/* first column of themes styling*/
+.column1of2themes {
+    float: left;
+    width: 55%;
+    background-color: black;
+    color: white;
+}
+
+/* second column of themes styling*/
+
+.column2of2themes {
+    margin-top: 15px;
+    width: 45%;
+    float: right;
+    background-color: black;
+    color: white;
+}
+
+/* first column of the sidebar styling*/
+.column1of2sidebar {
+    float: left;
+    width: 55%;
+    background-color: black;
+    color: white;
+
+}
+
+/* second column of the sidebar styling*/
+.column2of2sidebar {
+    margin-top: 15px;
+    width: 45%;
+    float: right;
+    background-color: black;
+    color: white;
+
+}
+
+/* styling for class dropdown box*/
+.dropDown {
+    width: 100%;
+}
+
+/* styling for sidebarHeadings*/
+.sidebarHeadings {
+    background-color: black;
+    float: left;
+}
+
+/* styling for sidebarText*/
+.sidebarText {
+    background-color: black;
+}
+
+/* styling for sidebarTitle*/
+.sidebarTitle {
+    width: 100%;
+    background-color: black;
+}
+
+/*styling for sidebar*/
+aside {
+    float: left;
+    display: block;
+    background-color: black;
+}
+
+/* styling for the content page*/
+#MainSection {
+    width: 70%;
+    float: right;
+}
+
+/* styling for just the bar of the navigation bar*/
+nav {
+    /*The menu spans the page width, right below the header.
+    At the top and left a few pixels padding is applied to create some room. */
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+/* styling for the links to the navigation bar*/
+    nav a {
+        /*Links in the Menu are white. This gets overriden by styles in chapter 7.*/
+        width: 100%;
+        padding-top: 16px;
+        padding-left: 8px;
+        height: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+
+/* styling for the navigation bar hover colour*/
+.navHover {
+    background-color: #00CCFF;
+    height: 100%;
+}
+
+/* styling for classes for the rest of the navigation bar*/
+.dynamicMenuItem {
+    width: 100%;
+    display: block;
+    background-color: black;
+}
+
+.dynamicNavItem {
+    width: 100%;
+    display: block;
+    background-color: black;
+}
+
+.staticMenuItem {
+    width: 100%;
+    display: block;
+    background-color: black;
+}
+
+.staticNavItem {
+    width: 100%;
+    display: block;
+    background-color: black;
+}
+
+.MainMenu {
+    /*The Menu gets a white border on all four sides.*/
+
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+    display: block;
+}
+
+    .MainMenu ul li {
+        /* Gives the four menu items in the main menu a width of 200px each.*/
+        height: 36px;
+
+        list-style-type: none;
+        width: 300px;
+        text-align: left;
+        color: white;
+        background-color: black;
+    }
+
+/* styling for the footer*/
+.footerPage {
+    width: 100%;
+    clear: both;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+    .footer a {
+        background-color: black;
+        color: white;
+    }
+
+.footer {
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+
+footer {
+    display: inline-block;
+    margin-top: 50px;
+    background-color: black;
+}
+
+.column1of4Footer {
+    font-weight: normal;
+    margin-left: 10%;
+    width: 138px;
+    float: left;
+    text-align: left;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.column2of4Footer {
+    font-weight: normal;
+    width: 138px;
+    margin-left: 10%;
+    float: left;
+    text-align: left;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.column3of4Footer {
+    font-weight: normal;
+    margin-left: 10%;
+    width: 138px;
+    float: left;
+    text-align: left;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.column4of4Footer {
+    font-weight: normal;
+    margin-left: 10%;
+    width: 138px;
+    float: left;
+    text-align: left;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footerHeading {
+    background-color: black;
+    color: white;
+    float: left;
+    margin-left: 7.5%;
+    text-align: left;
+    width: 40%;
+}
+
+/* styling for all buttons on the master page only*/
+.masterButton {
+    background-color: #0017af;
+    color: white;
+    border-color: #5ab8ff;
+    font-size: 10pt;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 5px;
+    float: right;
+}
+
+.masterButtonLeft {
+    background-color: #0017af;
+    color: white;
+    border-color: #5ab8ff;
+    font-size: 10pt;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 5px;
+    float: left;
+    margin-top: 20px;
+}
+
+/*styling for features on the Homepage only*/
+
+.introPicture {
+    width: 100%;
+    height: 50%;
+}
+
+.youTube {
+    width: 350px;
+    height: 250px;
+    float: left;
+}
+
+.openDaysVideo {
+    width: 350px;
+    margin-bottom: 50px;
+    float: left;
+}
+
+
+.openDaysInfo {
+    margin-left: 160px;
+    margin-bottom: 30px;
+    width: 320px;
+    float: right;
+
+}
+
+.headingFindInfo {
+    margin: 50px;
+    text-align: center;
+}
+.openDays {
+    padding-bottom: 20px;
+    margin-bottom: 10%;
+}
+
+
+/* styling for the links at the bottom of the page*/
+img, .column1of3, column2of3, column3of3 {
+    margin-bottom: 1%;
+    width: 100%;
+    height: 200px;
+}
+
+.column1of3 {
+    width: 240px;
+    height: 30%;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: black;
+    border-color: #086ffb;
+    color: white;
+    float: left;
+}
+
+.column2of3 {
+    width: 240px;
+    height: 30%;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: black;
+    border-color: #086ffb;
+    color: white;
+    float: left;
+}
+
+.column3of3 {
+    width: 240px;
+    height: 30%;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: black;
+    border-color: #086ffb;
+    color: white;
+    float: left;
+}
+
+
+h2.moreInfo {
+    text-align: center;
+}
+
+a {
+    color: #5ab8ff;
+}
+
+.moreInfo {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.favouriteCourses {
+    margin-top: 20px;
+}
+/* Styling for classes only affected the About Us Page*/
+.uniCentre {
+    float: left;
+    text-align: left;
+}
+
+.imgAboutUs {
+    float: left;
+    padding: 10px;
+}
+
+.column1of2 {
+    float: left;
+    width: 320px;
+}
+
+.column2of2 {
+    margin-left: 200px;
+    vertical-align: middle;
+    float: right;
+    width: 330px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.imgAboutUs {
+    width: 300px;
+    height: 200px;
+    padding-right: 20px;
+}
+
+.eachFacility {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    vertical-align: middle;
+    min-height: 170px;
+}
+
+.column2of2Park, li {
+    color: #5ab8ff;
+}
+
+.imgQRSC {
+    width: 450px;
+    height: 225px;
+    padding-right: 20px;
+}
+
+.images {
+    float: left;
+    margin-right: 25px;
+    width: 250px;
+    height: 200px;
+}
+
+/* Web User Control classes only*/
+table {
+    float: left;
+}
+
+.auto-style2 {
+    width: 10%;
+}
+
+.contactForm {
+    width: 80%;
+    height: 56px;
+}
+
+/*Contact Us Page classes onlu*/
+.contactUs1of2 {
+    width: 350px;
+    float: left;
+    height: 300px;
+}
+
+.contactUs2of2 {
+    margin-left: 120px;
+    text-align: center;
+    width: 300px;
+    float: right;
+    height: 300px;
+}
+
+.imgMap {
+    width: 90%;
+}
+
+.form {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #0017af;
+}
+
+.contactInfo {
+    width: 100%;
+    text-align: left;
+}
+
+.contactDetails {
+    margin-bottom: 20px;
+}
+
+.errorMessage {
+    color: red;
+}
+
+.PleaseWait {
+    color: #00FF00;
+    text-align: center;
+}
+
+.firstColumn {
+    height: 32px;
+}
+
+.enquiryInfo {
+    width: 569px;
+}
+
+.thirdColumn {
+    width: 614px;
+}
+
+/*Admin Master page classes only*/
+.footerHeadingAdmin {
+    background-color: black;
+    color: white;
+    float: left;
+    margin-left: 7.5%;
+    text-align: left;
+    width: 20%;
+}
+
+.footerAdmin {
+    color: white;
+}
+
+.column1of3Footer {
+    font-weight: normal;
+    margin-left: 10%;
+    width: 25%;
+    float: left;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+
+.column2of3Footer {
+    font-weight: normal;
+    width: 25%;
+    margin-left: 2.5%;
+    float: left;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+
+.column3of3Footer {
+    font-weight: normal;
+    margin-left: 2.5%;
+    width: 25%;
+    float: left;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+
+/*Admin Homepage classes only*/
+
+
+img, .column1of2Admin, .column2of2Admin {
+    width: 100%;
+    height: 200px;
+}
+
+.column1of2Admin {
+    width: 30%;
+    height: 30%;
+    margin-left: 15%;
+    text-align: center;
+    background-color: #5ab8ff;
+    border-color: #0017af;
+    float: left;
+}
+
+.column2of2Admin {
+    width: 30%;
+    height: 30%;
+    margin-right: 15%;
+    text-align: center;
+    background-color: #5ab8ff;
+    border-color: #0017af;
+    float: right;
+}
+
+/* laying out information for the other admin pages classes only */
+.link {
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    margin-left: 30px;
+    float: left;
+    font-size: 14pt;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.displayImage {
+    border: 1px solid;
+    border-color: #5ab8ff;
+}
+
+.column1of2subjectArea {
+    float: left;
+    width: 300px;
+    height: 200px;
+    align-content: center;
+}
+
+.column2of2subjectArea {
+    float: right;
+    width: 300px;
+    height: 220px;
+    margin-left: 60px;
+    vertical-align: middle;
+    align-content: center;
+}
+
+.column1of2course {
+    margin-top: 20px;
+    float: left;
+    width: 320px;
+}
+
+.column2of2course {
+    margin-top: 20px;
+    margin-left: 40px;
+    float: right;
+    width: 280px;
+}
+
+.dropDownAcademic {
+    margin-left: 50px;
+    width: 60%;
+}
+
+.img, column1of2SubjectArea {
+    width: 300px;
+    height: 200px;
+}
+
+.displayImage {
+    border: 1px solid;
+    border-color: #5ab8ff;
+}
+
+.viewComments {
+    float: left;
+    width: 70%;
+    align-content: center;
+}
+
+.detailsOfComment {
+    float: left;
+    font-weight: bold;
+    font-size: 10pt;
+    Color: #5ab8ff;
+}
+
+.CommentInfo {
+    float: left;
+    font-size: 14pt;
+    border: 1px solid #5ab8ff;
+    color: white;
+}
+
+.addComment {
+    width: 340px;
+    height: 200px;
+    color: #0017af;
+}
+
+.comment {
+    border: 1px solid #5ab8ff;
+    margin-bottom: 20px;
+}
+
+/*Modifying courses, subject areas and comments classes only*/
+.left, h2 {
+    text-align: left;
+    margin-left: 5%;
+}
+
+.addData {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 25px;
+}
+
+.txt_addData {
+    color: #0017af;
+}
+
+#PlaceHolder1 {
+    color: #5ab8ff;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid;
+    border-color: #5a8fff;
+}
+
+.editData {
+    align-content: center;
+    color: #5a8bff;
+}
+
+table.editMenu, th.editMenu, td.editMenu {
+    color: #5ab8ff;
+    border: 1px solid;
+    border-spacing: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+th {
+    background-color: black;
+    color: white;
+}
+tr {
+    color: #5ab8ff;
+    border-color: #5ab8ff;
+    border: 1px solid;
+}
+
+.leftButton {
+    float: left;
+}
+.rightButton {
+    float: right;
+}
+.errorMessageLogin {
+    color: red;
+    text-align: center;
+}
+.PleaseWaitLogin {
+    color: green;
+    text-align: center;
+}
+
+/* social media styling*/
+
+/* profile page in columns*/
+.column1of2Profile {
+    margin-top: 25px;
+    margin-left: 5%;
+    float: left;
+    width: 350px;
+    color: #5ab8ff;
+}
+
+.column2of2Profile {
+    margin-left: 135px;
+    float: right;
+    width: 320px;
+    margin-top: 25px;
+}
+
+/* displaying paragraphs on the pages with margins*/
+p, .info {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* laying out the friends in columns in a certain layout*/
+.BasketColumn1 {
+    margin-top: 50px;
+    float: left;
+    height: 5px;
+    width: 30px;
+}
+
+.BasketColumn2 {
+    width: 70%;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 120px;
+    color: #5ab8ff;
+    background-color: black;
+    height: 140px;
+}
+
+/* other profile page styling*/
+.profile {
+    width: 100px;
+    height: 120px;
+    border: 1px;
+    border-color: #0017af;
+}
+
+/* laying out the friends in columns in a certain layout*/
+.FriendMiniColumn1 {
+    float: left;
+    height: 5px;
+    width: 30px;
+}
+
+.FriendMiniColumn2 {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 120px;
+    width: 60%;
+    color: #5ab8ff;
+    background-color: black;
+    height: 100px;
+}
+
+/* form styling */
+    form.example button:hover {
+        background: #0b7dda;
+    }
+
+/* Clear floats */
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* styling search textbox and button*/
+.txtbx {
+    border: 2px solid black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.bttn {
+    border: solid black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+/* footer of messaging app section*/
+.lv-footer ms-reply {
+    margin-top: 5px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+
+.message {
+    border: 1px solid #5ab8ff;
+    margin-bottom: 5px;
+    width: 80%;
+}
+
+/* body of messaging app*/
+.media-body {
+    background-color: #5ab8ff;
+    color: black;
+    padding: 10px;
+    margin: 5%, 5%, 5%, 5%;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+/* when videos are posted*/
+.linkVideo {
+    color: black;
+}
+/* when the group chat is split into columns*/
+.GroupChatColumn1 {
+    float: left;
+    height: 5px;
+    width: 30px;
+}
+
+.GroupChatColumn2 {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 120px;
+    color: #5ab8ff;
+    background-color: black;
+    height: 100px;
+}
+
+/*when messaging app is scrollable*/
+.lv-body {
+    width: 80%;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 520px;
+    border: 1px solid #5ab8ff;
+}
+
+/* alternative way of stylin forms*/
+.form2 {
+    align-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #0017af;
+}

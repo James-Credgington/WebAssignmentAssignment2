@@ -1,0 +1,15 @@
+﻿Hello ##Gender## ##Name##,
+
+You currently ##Student## a student at Chesterfield College.
+
+Thank you for contacting us with the following Enquiry, '##EnquiryInformation##'
+
+We will get back to you as soon as possible, using the following contact details you provided
+Email Address: ##EmailAddress##
+Phone Number: ##PhoneNumber##
+
+
+Yours Faithfully,
+
+James Credgington
+Web Developer of the Higher Education Chesterfield College Website

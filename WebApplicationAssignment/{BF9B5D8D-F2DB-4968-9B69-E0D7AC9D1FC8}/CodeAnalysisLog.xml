@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="d:\program files (x86)\microsoft visual studio\2017\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\Student\AppData\Local\Temp\tmpA8AF.tmp.cadir\bin\App_Web_03vq0asa.dll">
+   <Modules>
+    <Module Name="app_web_03vq0asa.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="About_SignUp" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddNewPerson()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-04-16 14:28:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\WebApplicationAssignment\WebApplicationAssignment\About" File="SignUpUser.aspx.cs" Line="180">Object 'con' can be disposed more than once in method 'About_SignUp.AddNewPerson()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 180</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CheckIfUserNameInDatabase()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-04-16 14:28:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\WebApplicationAssignment\WebApplicationAssignment\About" File="SignUpUser.aspx.cs" Line="80">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'About_SignUp.CheckIfUserNameInDatabase()' could contain the following variables 'this.Txt_EmailAddress.Text'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Student\AppData\Local\Temp\tmpA8AF.tmp.cadir\bin\App_Web_j4nbnza4.dll">
+   <Modules>
+    <Module Name="app_web_j4nbnza4.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="Admin_SignUpAdmin" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddNewPerson()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2020-04-16 14:28:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\WebApplicationAssignment\WebApplicationAssignment\Admin" File="SignUpAdmin.aspx.cs" Line="179">Object 'con' can be disposed more than once in method 'Admin_SignUpAdmin.AddNewPerson()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 179</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CheckIfUserNameInDatabase()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-04-16 14:28:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\WebApplicationAssignment\WebApplicationAssignment\Admin" File="SignUpAdmin.aspx.cs" Line="85">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'Admin_SignUpAdmin.CheckIfUserNameInDatabase()' could contain the following variables 'this.Txt_EmailAddress.Text'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Student\AppData\Local\Temp\tmpA8AF.tmp.cadir\bin\App_Web_ure3cnsu.dll">
+   <Modules>
+    <Module Name="app_web_ure3cnsu.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="SocialMedia_FriendChat" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Btn_Send_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-04-16 14:28:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\WebApplicationAssignment\WebApplicationAssignment\SocialMedia" File="FriendChat.aspx.cs" Line="136">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'SocialMedia_FriendChat.Btn_Send_Click(object, EventArgs)' could contain the following variables 'this.Id', 'Convert.ToInt32(this.UserId)', 'this.Txt_Message.Text', 'date2', 'time'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadChatbox()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-04-16 14:28:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\WebApplicationAssignment\WebApplicationAssignment\SocialMedia" File="FriendChat.aspx.cs" Line="110">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'SocialMedia_FriendChat.LoadChatbox()' could contain the following variables 'Convert.ToInt32(this.UserId)', 'this.Id', 'this.userId', 'this.friendUserId'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SocialMedia_PublicChat" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Btn_Send_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-04-16 14:28:59Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\WebApplicationAssignment\WebApplicationAssignment\SocialMedia" File="PublicChat.aspx.cs" Line="92">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'SocialMedia_PublicChat.Btn_Send_Click(object, EventArgs)' could contain the following variables 'Convert.ToInt32(this.UserId)', 'this.Txt_Message.Text', 'Convert.ToString(imageUrl + fileName)', 'date2', 'time'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\WebApplicationAssignment\WebApplicationAssignment\SocialMedia" File="PublicChat.aspx.cs" Line="68">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'SocialMedia_PublicChat.Btn_Send_Click(object, EventArgs)' could contain the following variables 'Convert.ToInt32(this.UserId)', 'this.Txt_Message.Text', 'date2', 'time'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\WebApplicationAssignment\WebApplicationAssignment\SocialMedia" File="PublicChat.aspx.cs" Line="109">The query string passed to 'SqlCommand.SqlCommand(string, SqlConnection)' in 'SocialMedia_PublicChat.Btn_Send_Click(object, EventArgs)' could contain the following variables 'Convert.ToInt32(this.UserId)', 'this.Txt_Message.Text', 'this.Txt_Video.Text', 'date2', 'time'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 180</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
